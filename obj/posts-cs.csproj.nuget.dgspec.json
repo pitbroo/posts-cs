@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\dev\\posts-cs\\posts-cs.csproj": {}
+    "C:\\Users\\piotr\\RiderProjects\\posts-cs\\posts-cs.csproj": {}
   },
   "projects": {
-    "D:\\dev\\posts-cs\\posts-cs.csproj": {
+    "C:\\Users\\piotr\\RiderProjects\\posts-cs\\posts-cs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\dev\\posts-cs\\posts-cs.csproj",
+        "projectUniqueName": "C:\\Users\\piotr\\RiderProjects\\posts-cs\\posts-cs.csproj",
         "projectName": "posts-cs",
-        "projectPath": "D:\\dev\\posts-cs\\posts-cs.csproj",
+        "projectPath": "C:\\Users\\piotr\\RiderProjects\\posts-cs\\posts-cs.csproj",
         "packagesPath": "C:\\Users\\piotr\\.nuget\\packages\\",
-        "outputPath": "D:\\dev\\posts-cs\\obj\\",
+        "outputPath": "C:\\Users\\piotr\\RiderProjects\\posts-cs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\piotr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
