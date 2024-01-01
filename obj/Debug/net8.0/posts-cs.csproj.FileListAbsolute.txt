@@ -158,3 +158,4 @@ C:\Users\piotr\RiderProjects\posts-cs\bin\Debug\net8.0\Microsoft.Extensions.Logg
 C:\Users\piotr\RiderProjects\posts-cs\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\piotr\RiderProjects\posts-cs\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\piotr\RiderProjects\posts-cs\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+C:\Users\piotr\RiderProjects\posts-cs\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
