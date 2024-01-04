@@ -21,12 +21,18 @@ namespace posts_cs.repository
 
         public async Task<IEnumerable<Post>> GetAllPosts()
         {
-            return await _dbContext.Posts.Include(p => p.Comments).ToListAsync();
+            return await _dbContext.Posts
+                .Include(p => p.Comments.OrderByDescending(c => c.Id))
+                .Include(p => p.Author) 
+                .OrderByDescending(p => p.Id)
+                .ToListAsync();
         }
 
         public async Task<Post> GetPostById(int postId)
         {
-            return await _dbContext.Posts.Include(p => p.Comments)
+            return await _dbContext.Posts
+                .Include(p => p.Comments)
+                .Include(p => p.Author)
                 .FirstOrDefaultAsync(p => p.Id == postId);
         }
 
@@ -45,7 +51,6 @@ namespace posts_cs.repository
                 existingPost.Name = post.Name;
                 existingPost.Description = post.Description;
                 existingPost.Photo = post.Photo;
-                // Update other properties as needed
                 await _dbContext.SaveChangesAsync();
             }
         }

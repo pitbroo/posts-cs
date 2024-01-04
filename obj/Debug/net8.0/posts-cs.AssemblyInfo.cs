@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("posts-cs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98a1ad12549f980e9c74836228614a765500ccfa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90ed5f03005de2a6c6d249b5bea1b838322bfc2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("posts-cs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("posts-cs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
