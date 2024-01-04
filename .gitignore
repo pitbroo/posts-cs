@@ -1,2 +1,2 @@
-﻿# Ignore bin/Debug directory
-bin/Debug/
+﻿bin/
+obj/
