@@ -1,11 +1,14 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using posts_cs.model;
 using posts_cs.service;
 
 namespace posts_cs.Controllers;
 
-[Route("api/posts")]
 [ApiController]
+[Authorize]
+[Route("[controller]")]
 public class PostController : ControllerBase
 {
     private readonly IPostService _postService;

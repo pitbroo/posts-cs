@@ -12,9 +12,15 @@ namespace posts_cs.model
         [Column("description")]
         public string Description { get; set; }
         [Column("photo")]
-        public string Photo { get; set; }
+        public string Photo { get; set; } = string.Empty; 
+
         [Column("comments")]
-        public List<Comment> Comments { get; set; }
+        public List<Comment> Comments { get; set; } = new List<Comment>();
+        [Column("user_id")] 
+        public int? UserId { get; set; }
+
+        [ForeignKey("UserId")] // Użyj nazwy właściwości, a nie nazwy kolumny
+        public User Author { get; set; }
     }
     [Table("comments")]
     public class Comment
@@ -23,6 +29,11 @@ namespace posts_cs.model
         public int Id { get; set; }
         [Column("text")]
         public string Text { get; set; }
+        [Column("user_id")] 
+        public int? UserId { get; set; }
+
+        [ForeignKey("UserId")] // Użyj nazwy właściwości, a nie nazwy kolumny
+        public User Author { get; set; }
     }
 
 }
