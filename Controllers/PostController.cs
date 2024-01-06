@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using posts_cs.model;
 using posts_cs.service;
+using WebApi.Models;
 
 namespace posts_cs.Controllers;
 
@@ -55,6 +56,26 @@ public class PostController : ControllerBase
         await _postService.UpdatePost(postId, post);
         return NoContent();
     }
+    [HttpPatch("{postId}")]
+    public async Task<IActionResult> Patch(int postId, [FromBody] UpdatePostDto updateDto)
+    {
+        var postToUpdate = await _postService.GetPostById(postId);
+        if (postToUpdate == null)
+        {
+            return NotFound();
+        }
+
+        if (updateDto.Name != null)
+            postToUpdate.Name = updateDto.Name;
+
+        if (updateDto.Description != null)
+            postToUpdate.Description = updateDto.Description;
+        
+        await _postService.UpdatePost(postId, postToUpdate);
+        return NoContent();
+    }
+
+
 
     [HttpDelete("{postId}")]
     public async Task<IActionResult> Delete(int postId)
