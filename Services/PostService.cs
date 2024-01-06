@@ -1,5 +1,6 @@
 ﻿using posts_cs.model;
 using posts_cs.repository;
+using posts_cs.Services;
 
 namespace posts_cs.service;
 
@@ -15,15 +16,28 @@ public interface IPostService
 public class PostService : IPostService
 {
     private readonly IPostRepository _postRepository;
+    private readonly IUserService _userService;
 
-    public PostService(IPostRepository postRepository)
+    public PostService(IPostRepository postRepository, IUserService userService)
     {
         _postRepository = postRepository;
+        _userService = userService;
     }
 
     public async Task<IEnumerable<Post>> GetAllPosts()
     {
-        return await _postRepository.GetAllPosts();
+        var posts = await _postRepository.GetAllPosts();
+
+        foreach (var post in posts)
+        {
+            foreach (var comment in post.Comments)
+            {
+                var author = _userService.GetById(comment.UserId);
+                comment.Author = author;
+            }
+        }
+
+        return posts;
     }
 
     public async Task<Post> GetPostById(int postId)

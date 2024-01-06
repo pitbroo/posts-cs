@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace posts_cs.model
 {
@@ -25,12 +26,13 @@ namespace posts_cs.model
     [Table("comments")]
     public class Comment
     {
+        [Key]
         [Column("id")]
         public int Id { get; set; }
         [Column("text")]
         public string Text { get; set; }
         [Column("user_id")] 
-        public int? UserId { get; set; }
+        public int UserId { get; set; }
 
         [ForeignKey("UserId")] 
         public User Author { get; set; }

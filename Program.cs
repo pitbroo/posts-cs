@@ -24,10 +24,11 @@ services.AddScoped<IPostRepository, PostRepository>();
 services.AddScoped<IJwtUtils, JwtUtils>();
 services.AddScoped<IUserService, UserService>();
 services.AddScoped<IUserRepository, UserRepository>();
+services.AddScoped<ICommentService, CommentService>();
+services.AddScoped<ICommentRepository, CommentRepository>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    // Konfiguracja opcji DbContext, np. connectionString
     options.UseSqlServer("Host=localhost;Database=posts;Username=hexagonal;Password=hexagonal;Schema=public");
 });
 
