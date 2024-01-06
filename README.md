@@ -6,9 +6,7 @@
 
 #### Włączenie Dockera z Obrazem Bazy
 ````
-```
 docker-compose up
-```
 ````
 
 #### Uruchomienie Frontu
@@ -18,11 +16,8 @@ Postępuj zgodnie z instrukcjami instalacji i uruchamiania zawartymi w tym repoz
 
 #### Uruchomienie Aplikacji C#
 Uruchom aplikację w cisual studioa lub przez `dotnet run`.
-```
-```
+````
 dotnet build
 dotnet run
-```
----
-
+````
 #
