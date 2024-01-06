@@ -19,7 +19,7 @@ namespace posts_cs.model
         [Column("user_id")] 
         public int? UserId { get; set; }
 
-        [ForeignKey("UserId")] // Użyj nazwy właściwości, a nie nazwy kolumny
+        [ForeignKey("UserId")]
         public User Author { get; set; }
     }
     [Table("comments")]
@@ -32,7 +32,7 @@ namespace posts_cs.model
         [Column("user_id")] 
         public int? UserId { get; set; }
 
-        [ForeignKey("UserId")] // Użyj nazwy właściwości, a nie nazwy kolumny
+        [ForeignKey("UserId")] 
         public User Author { get; set; }
     }
 

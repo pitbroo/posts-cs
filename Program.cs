@@ -23,6 +23,7 @@ services.AddScoped<IPostRepository, PostRepository>();
 /*services.AddScoped<IAuthService, AuthService>();*/
 services.AddScoped<IJwtUtils, JwtUtils>();
 services.AddScoped<IUserService, UserService>();
+services.AddScoped<IUserRepository, UserRepository>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
