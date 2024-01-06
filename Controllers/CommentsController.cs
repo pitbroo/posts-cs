@@ -18,7 +18,7 @@ namespace posts_cs.Controllers
             _userService = userService;
         }
 
-        // GET: comments
+        
         [HttpGet]
         public async Task<IActionResult> GetAllComments()
         {
@@ -26,7 +26,6 @@ namespace posts_cs.Controllers
             return Ok(comments);
         }
 
-        // GET: comments/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCommentById(int id)
         {
@@ -37,7 +36,6 @@ namespace posts_cs.Controllers
             return Ok(comment);
         }
 
-        // POST: comments/postId
         [HttpPost("{postId}")]
         public async Task<IActionResult> CreateComment(int postId, [FromBody] CommentDto commentDto)
         {
@@ -59,7 +57,6 @@ namespace posts_cs.Controllers
             }
         }
 
-        // PUT: comments/5
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateComment(int id, [FromBody] Comment comment)
         {
@@ -74,7 +71,6 @@ namespace posts_cs.Controllers
             }
         }
 
-        // DELETE: comments/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteComment(int id)
         {
